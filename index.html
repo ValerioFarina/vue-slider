@@ -11,20 +11,23 @@
         <div id="root">
             <div id="container">
                 <div id="prev" class="float-left">
-                    <a @click="prev(); stop()" href="#" class="arrow">
+                    <a @click="prev(); stop()" class="arrow" href="#">
                         <i class="fas fa-arrow-left"></i>
                     </a>
                 </div>
+
                 <div id="images" class="float-left">
                     <img :src="images[imgIndex]">
                 </div>
+
                 <div id="next" class="float-left">
-                    <a @click="next(); stop()" href="#" class="arrow">
+                    <a @click="next(); stop()" class="arrow" href="#">
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+                
                 <div id="bullets">
-                    <a v-for="(image, index) in images" href="#" class="bullet" @click="imgIndex = index; stop()" :class="index == imgIndex ? 'current' : ''"></a>
+                    <a v-for="(image, index) in images" class="bullet" @click="imgIndex = index; stop()" :class="index == imgIndex ? 'current' : null" href="#"></a>
                 </div>
             </div>
         </div>

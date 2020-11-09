@@ -1,4 +1,5 @@
 var app = new Vue({
+
     el : '#root',
 
     data : {
@@ -7,11 +8,12 @@ var app = new Vue({
             'img/img1.jpg',
             'img/img2.jpg',
             'img/img3.jpg',
-            'img/img4.jpg'
+            'img/img4.jpg',
+            'img/img5.jpg',
+            'img/img6.jpg'
         ],
         // imgIndex represents the index (within the array images) of the image currently displayed in the carousel
-        imgIndex : 0,
-        isCurrent : false
+        imgIndex : 0
     },
 
     methods : {
@@ -41,6 +43,7 @@ var app = new Vue({
             clearInterval(this.clock);
         }
     },
+
     // this function is called after the Vue's instance is created
     // this function sets an interval of 3 seconds
     // every 3 seconds the function next is called, and thus the carousel's images "scroll" from left to right automatically every 3 seconds
@@ -48,4 +51,5 @@ var app = new Vue({
     created : function() {
         this.clock = setInterval(this.next, 3000);
     }
+
 });
