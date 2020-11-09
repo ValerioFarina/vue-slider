@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>VUE Slider</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="root">
+            <div id="container">
+                <div id="prev" class="float-left">
+                    <a href="#" class="arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div id="images" class="float-left">
+                    <img :src="images[imgIndex]">
+                </div>
+                <div id="next" class="float-left">
+                    <a href="#" class="arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div id="bullets">
+                    <a v-for="image in images" href="#" class="bullet"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ***************** javascript ***************** -->
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
