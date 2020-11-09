@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <div id="bullets">
-                    <a v-for="(image, index) in images" href="#" class="bullet" :class="index == imgIndex ? 'current' : ''"></a>
+                    <a v-for="(image, index) in images" href="#" class="bullet" @click="imgIndex = index; stop()" :class="index == imgIndex ? 'current' : ''"></a>
                 </div>
             </div>
         </div>

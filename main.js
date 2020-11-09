@@ -10,7 +10,8 @@ var app = new Vue({
             'img/img4.jpg'
         ],
         // imgIndex represents the index (within the array images) of the image currently displayed in the carousel
-        imgIndex : 0
+        imgIndex : 0,
+        isCurrent : false
     },
 
     methods : {
