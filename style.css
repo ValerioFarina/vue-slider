@@ -8,7 +8,7 @@
     float: left;
 }
 
-#container {
+#slider {
     position: relative;
     height: 600px;
     width: 900px;
@@ -63,4 +63,20 @@
 
 #bullets .bullet.current {
     background-color: blue;
+}
+
+#add-delete {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: auto;
+}
+
+#add-new-images input {
+    min-width : 400px;
+    margin-right: 5px;
+}
+
+input, button {
+    height: 30px;
 }

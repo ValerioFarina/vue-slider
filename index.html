@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="root">
-            <div id="container">
+            <div id="slider">
                 <div id="prev" class="float-left">
                     <a @click="prev(); stop()" class="arrow" href="#">
                         <i class="fas fa-arrow-left"></i>
@@ -25,9 +25,20 @@
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                
+
                 <div id="bullets">
-                    <a v-for="(image, index) in images" class="bullet" @click="imgIndex = index; stop()" :class="index == imgIndex ? 'current' : null" href="#"></a>
+                    <a v-for="(image, index) in images" class="bullet" @click="imgIndex = index; stop()" :class="{current : index == imgIndex}" href="#"></a>
+                </div>
+            </div>
+
+            <div id="add-delete">
+                <div id="add-new-images">
+                    <input type="text" :placeholder="inputMessage" v-model="newImg" v-on:keydown.enter="addNewImg">
+                    <button @click="addNewImg">Add a new image</button>
+                </div>
+
+                <div id="delete-images">
+                    <button @click="deleteImg">Delete image</button>
                 </div>
             </div>
         </div>
